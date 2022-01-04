@@ -1,0 +1,23 @@
+:root{
+    --night_secondary: #a9acb1;
+    --night_secondary_soft:#3a3b3c;
+}
+body.night_mode{
+    background: #19191a;
+}
+
+.night_mode tr{
+    background-color: var(--night_secondary_soft);
+}
+.night_mode .divider{
+    background-color: var(--night_secondary);
+}
+.night_mode .result{
+    color: var(--night_secondary);
+}
+.night_mode td{
+    color: var(--night_secondary) !important;
+}.night_mode input,.night_mode select{
+    color: var(--night_secondary);
+    background: var(--night_secondary_soft);
+}

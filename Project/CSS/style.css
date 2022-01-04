@@ -1,0 +1,221 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Roboto:wght@300;400;700&family=Source+Sans+Pro:wght@200;400;600&display=swap');
+@font-face {
+    font-family: "mm";
+    font-weight: normal;
+    src: url(../fonts/MyanmarSagar/MyanmarSagar.ttf);
+}
+:root{
+    --primary : #2cd1ee;
+    --primary_soft : #6fdcf0;
+    --secondry : #464545;
+    --secondry_soft : #f2f2f2;
+    --light : #ffffff;
+    --dark : #3a3b3c;
+    --dark_soft:#ddd;
+    --br : 5px;
+}
+@font-face {
+    font-family: "mm";
+    font-weight: bold;
+    src: url(../fonts/Pyidaungsu-1.8.3_Bold.ttf);
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: bold;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--secondry);
+}
+
+.app{
+    width: 700px;
+    margin: 100px auto;
+}
+
+.output{
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+}
+
+.brand_container{
+display: flex;
+align-items: center;
+}
+
+.result_container{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 50px;
+}
+.brand{
+    margin-left: 10px;
+    font-size: 30px;
+    font-family: bold;
+}
+.result{
+    font-size: 50px;
+}
+
+.divider{
+    height: 5px;
+    background-color: var(--secondry);
+    border-radius: var(--br);
+}
+
+.calc{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.container{
+    width: 150px;
+}
+
+label{
+    display: block;
+    margin-bottom: 8px;
+}
+#from,#to{
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: var(--br);
+    border: 1px solid var(--secondry);
+}
+#input{
+    padding: 5px 10px;
+    border-radius: var(--br);
+    border: 1px solid var(--secondry);
+    text-align: right;
+    width: 86%;
+}
+.clacBtn{
+    height: 100%;
+    width: 100%;
+    border-radius: var(--br);
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+    color: var(--light);
+    text-transform: uppercase;
+    font-size: 20px;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+select::-ms-expand {	display: none; }
+select{
+    -webkit-appearance: none;
+    appearance: none;
+}
+@-moz-document url-prefix(){
+  select { width: 110%; background-position: right 30px center !important; border: none !important;}
+}
+
+select:focus-visible,input:focus-visible,button:focus-visible{
+    outline: none;
+}
+.clacBtn:active{
+    background-color: var(--primary_soft);
+}
+.table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .table td, .table th {
+    border: 1px solid var(--dark_soft);
+    padding: 8px;
+    border-radius: var(--br);
+    text-align: center;
+  }
+  
+  /* .table tr:nth-child(even){background-color: var(--secondry_soft);} */
+  
+  .table tr:hover {background-color: var(--dark_soft);}
+
+  .table tr:last-child{border-bottom: 3px solid var(--primary) ;}
+  
+  .table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    /* text-align: left; */
+    background-color: var(--primary);
+    color: var(--secondry);
+  }
+
+@media screen and (max-width:480px){
+    .app{
+        width: 96%;
+        margin: 30px auto;
+    }
+
+    .output{
+        flex-flow: column;
+        align-items: flex-end;
+    }
+    .brand_container{
+        width: 100%;
+    }
+
+    .calc{
+        flex-wrap: wrap;
+    }
+    .container{
+        width: 100% ;
+        margin-bottom: 15px;
+    }
+    #input{
+        width: 94% !important;
+    }
+    .from_containor,.to_container{
+        width: 46%;
+    }
+    .clacBtn{
+        padding: 15px 0px;
+        
+    }
+    .calc_container{
+        margin-bottom: 0px !important;
+    }
+    #input,#from,#to{
+        padding: 15px 10px;
+    }
+    
+}
+.dark{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--dark);
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+.dark .fas{
+    color: var(--light);
+}
+.dark_mode .dark{
+    background-color: var(--light);
+    color: var(--dark);
+}
